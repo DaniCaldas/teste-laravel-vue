@@ -28,4 +28,12 @@ class LoginController extends Controller
 
         return redirect()->route('dashboard')->with(['success' => 'Logado com sucesso']);
     }
+
+    public function logoff(Request $request) {
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
+    }
 }

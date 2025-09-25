@@ -16,5 +16,7 @@ Route::get('/login', fn() => inertia('Login/Login'))->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::get('/register',  fn() => inertia('Register/Index'))->name('register');
 Route::post('/register', [CompanyController::class, 'store']);
+Route::post('/logoff', [LoginController::class, 'logoff'])->name('logoff');
 
 Route::get('/dashboard', fn() => inertia('Dashboard/Index'))->name('dashboard')->middleware(CompanyAuth::class);
+Route::get('/colaboradores', fn() => inertia('Employees/Index'))->name('colaboradores')->middleware(CompanyAuth::class);

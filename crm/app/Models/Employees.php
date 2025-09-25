@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Collaborator extends Model
+class Employees extends Model
 {
     protected $table = 'collaborator';
 
