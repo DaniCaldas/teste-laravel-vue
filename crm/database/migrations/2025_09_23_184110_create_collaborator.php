@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('collaborator', function (Blueprint $table) {
              $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('number')->unique();
-            $table->string('password');
+            $table->string('email');
+            $table->string('phone');
             $table->foreignId('company_id')->constrained('company')->onDelete('cascade');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamp('created_at')->nullable();
+            $table->timestamp('update_at')->nullable();
         });
     }
 

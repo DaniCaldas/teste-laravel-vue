@@ -12,8 +12,8 @@
             <span>Início</span>
         </Link>
 
-        <Link href="/colaboradores" :class="linkClass('/colaboradores')">
-            <Users2 :class="iconClass('/colaboradores')" size="18" />
+        <Link href="/employees" :class="linkClass('/employees')">
+            <Users2 :class="iconClass('/employees')" size="18" />
             <span>Colaboradores</span>
         </Link>
       </nav>

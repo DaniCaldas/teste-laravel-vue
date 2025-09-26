@@ -14,6 +14,7 @@ createInertiaApp({
         const page = pages[`./Pages/${name}.vue`]
         page.default.layout ??= (name => {
             if (name === 'Login/Login') return null
+            if (name === 'Register/Index') return null
             return AppLayout
         })(name)
         return page

@@ -26,7 +26,7 @@ class CompanyController extends Controller
                 $company->name = $request->name;
                 $company->name_fantasy = $request->name_fantasy;
                 $company->cnpj = preg_replace('/\D/', '', $request->cnpj);
-                $company->password = Hash::make($request->password);
+                $company->password = $request->password;
                 $company->save();
                 return redirect()->route('index')->with(['success' => 'Empresa cadastrada com sucesso']);
             }

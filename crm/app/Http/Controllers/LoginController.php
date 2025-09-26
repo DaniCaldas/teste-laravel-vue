@@ -19,7 +19,7 @@ class LoginController extends Controller
             return redirect()->back()->with(['error' => 'CNPJ não encontrado'], 404);
         }
 
-        if (!Hash::check($request->password, $company->password)) {
+        if ($request->password != $company->password) {
             return redirect()->back()->with(['error' => 'Senha incorreta'], 404);
         }
         
